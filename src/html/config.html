@@ -1,0 +1,91 @@
+<section class="settings">
+  <h2 class="settings-heading">Settings for Youtube Embed Plug-in</h2>
+  <p class="kintoneplugin-desc">This plug-in embeds a Youtube video specified by its link into a Blank Space field in the record details.</p>
+    <!-- Link field settings -->
+    <div class="block">  
+      <p class="kintoneplugin-row">
+        <label class="kintoneplugin-label">
+          Youtube Link Field: 
+          <span class="kintoneplugin-require">*</span>
+        </label>
+      </p>
+      <p class="kintoneplugin-row">
+          Select the field that holds the link to the Youtube video. Can be a Link field (URL) or Text field.
+      </p>
+      <p>
+        <div class="kintoneplugin-select-outer">
+          <div class="kintoneplugin-select">
+            <select id="select_link_field" name="select_link_field">
+              <option value="not selected">-----</option>
+            </select>
+          </div>
+        </div>
+      </p>
+    </div>
+    <!-- Blank space field settings -->
+    <div class="block">  
+      <p class="kintoneplugin-row">
+        <label class="kintoneplugin-label">
+          Blank Space Field: 
+          <span class="kintoneplugin-require">*</span>
+        </label>
+      </p>
+      <p class="kintoneplugin-row">
+          Select a Blank Space field to place the embedded video.
+      </p>
+      <p>
+        <div class="kintoneplugin-select-outer">
+          <div class="kintoneplugin-select">
+            <select id="select_space_field" name="select_space_field">
+              <option value="not selected">-----</option>
+            </select>
+          </div>
+        </div>
+      </p>
+    </div>
+    <!-- Embedded video dimension settings -->
+    <div class="block">  
+      <p class="kintoneplugin-row">
+        <label class="kintoneplugin-label">
+          Video Dimensions:
+        </label>
+      </p>
+      <p class="kintoneplugin-row">
+          Aspect ratio lock (16:9):
+      </p>
+      <p class="kintoneplugin-row">
+        <div class="kintoneplugin-input-checkbox">
+          <span class="kintoneplugin-input-checkbox-item">
+            <input type="checkbox" name="ratio_enabled" value="0" id="ratio_checkbox" checked>
+            <label for="ratio_checkbox">Enabled</label>  
+          </span>
+        </div>
+      </p>
+      <p class="kintoneplugin-row">
+          Insert the desired width of the embedded video in pixels.
+      </p>
+      <p>
+        <div class="kintoneplugin-input-outer">
+          <input type="text" id="insert_width" class="kintoneplugin-input-text" name="insert_width" value="560">
+        </div>
+      </p>
+      <p class="kintoneplugin-row">
+          Insert the desired height of the embedded video in pixels.
+      </p>
+      <p>
+        <div class="kintoneplugin-input-outer">
+          <input type="text" id="insert_height" class="kintoneplugin-input-text" name="insert_height" value="315">
+        </div>
+      </p>
+      <p class="kintoneplugin-input-outer">
+        <button type="button" id="reset_dimensions">Reset default dimsensions</button>
+    </p>
+    </div>
+    <!-- Cancel and Save buttons -->
+    <div class="block">
+      <p class="kintoneplugin-row">
+          <button type="button" id="settings-cancel" class="kintoneplugin-button-dialog-cancel">Cancel</button>
+          <button type="submit" id="settings-save" class="kintoneplugin-button-dialog-ok">Save</button>
+      </p>
+    </div>
+</section>
