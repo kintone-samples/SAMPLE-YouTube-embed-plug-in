@@ -1,0 +1,17 @@
+.settings-heading {
+  padding: 1em 0;
+}
+
+.block {
+	margin-top: 25px;
+}
+
+#reset_dimensions {
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #3498db;
+  padding: 0px;
+  margin-top: 10px;
+  cursor: pointer;
+}
