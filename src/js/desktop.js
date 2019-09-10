@@ -1,3 +1,8 @@
+/*
+MIT License
+Copyright (c) 2019 Cybozu
+https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/blob/master/LICENSE
+*/
 (function(PLUGIN_ID) {
   'use strict';
   // Record details event

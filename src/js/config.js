@@ -1,3 +1,8 @@
+/*
+MIT License
+Copyright (c) 2019 Cybozu
+https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/blob/master/LICENSE
+*/
 jQuery.noConflict();
 
 (function($, PLUGIN_ID) {
