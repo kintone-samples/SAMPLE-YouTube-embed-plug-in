@@ -1,94 +1,64 @@
 <!-- MIT License
 Copyright (c) 2019 Cybozu
 https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/blob/master/LICENSE -->
-<section class="settings">
-  <h2 class="settings-heading">Settings for Youtube Embed Plug-in</h2>
-  <p class="kintoneplugin-desc">This plug-in embeds a Youtube video specified by its link into a Blank Space field in the record details.</p>
+<section>
+  <form class="js-submit-settings">
     <!-- Link field settings -->
-    <div class="block">  
-      <p class="kintoneplugin-row">
-        <label class="kintoneplugin-label">
-          Youtube Link Field: 
-          <span class="kintoneplugin-require">*</span>
-        </label>
-      </p>
-      <p class="kintoneplugin-row">
-          Select the field that holds the link to the Youtube video. Can be a Link field (URL) or Text field.
-      </p>
-      <p>
-        <div class="kintoneplugin-select-outer">
-          <div class="kintoneplugin-select">
-            <select id="select_link_field" name="select_link_field">
-              <option value="not selected">-----</option>
-            </select>
-          </div>
+    <div class="kintoneplugin-row">  
+      <label for="select-link-field" class="kintoneplugin-label">Youtube Link Field
+        <span class="kintoneplugin-require">*</span>
+      </label>
+      <p class="kintoneplugin-desc">Select the field that holds the link to the Youtube video. Can be a Link field (URL) or Text field.</p>
+      <div class="kintoneplugin-select-outer">
+        <div class="kintoneplugin-select">
+          <select name="js-select-link-field" id="select-link-field" required>
+            <option value="">-----</option>
+          </select>
         </div>
-      </p>
+      </div>
     </div>
     <!-- Blank space field settings -->
-    <div class="block">  
-      <p class="kintoneplugin-row">
-        <label class="kintoneplugin-label">
-          Blank Space Field: 
-          <span class="kintoneplugin-require">*</span>
-        </label>
-      </p>
-      <p class="kintoneplugin-row">
-          Select a Blank Space field to place the embedded video.
-      </p>
-      <p>
-        <div class="kintoneplugin-select-outer">
-          <div class="kintoneplugin-select">
-            <select id="select_space_field" name="select_space_field">
-              <option value="not selected">-----</option>
-            </select>
-          </div>
+    <div class="kintoneplugin-row">  
+      <label for="select-space-field" class="kintoneplugin-label">Blank Space Field
+        <span class="kintoneplugin-require">*</span>
+      </label>
+      <p class="kintoneplugin-desc">Select a Blank Space field to place the embedded video.</p>
+      <div class="kintoneplugin-select-outer">
+        <div class="kintoneplugin-select">
+          <select name="js-select-space-field" id="select-space-field" required>
+            <option value="">-----</option>
+          </select>
         </div>
-      </p>
+      </div>
     </div>
     <!-- Embedded video dimension settings -->
-    <div class="block">  
-      <p class="kintoneplugin-row">
-        <label class="kintoneplugin-label">
-          Video Dimensions:
-        </label>
-      </p>
-      <p class="kintoneplugin-row">
-          Aspect ratio lock (16:9):
-      </p>
-      <p class="kintoneplugin-row">
-        <div class="kintoneplugin-input-checkbox">
-          <span class="kintoneplugin-input-checkbox-item">
-            <input type="checkbox" name="ratio_enabled" value="0" id="ratio_checkbox" checked>
-            <label for="ratio_checkbox">Enabled</label>  
-          </span>
-        </div>
-      </p>
-      <p class="kintoneplugin-row">
-          Insert the desired width of the embedded video in pixels.
-      </p>
-      <p>
-        <div class="kintoneplugin-input-outer">
-          <input type="text" id="insert_width" class="kintoneplugin-input-text" name="insert_width" value="560">
-        </div>
-      </p>
-      <p class="kintoneplugin-row">
-          Insert the desired height of the embedded video in pixels.
-      </p>
-      <p>
-        <div class="kintoneplugin-input-outer">
-          <input type="text" id="insert_height" class="kintoneplugin-input-text" name="insert_height" value="315">
-        </div>
-      </p>
-      <p class="kintoneplugin-input-outer">
-        <button type="button" id="reset_dimensions">Reset default dimsensions</button>
-    </p>
+    <div class="kintoneplugin-row">  
+      <label class="kintoneplugin-label">
+        Video Dimensions:
+      </label>
+      <p class="kintoneplugin-desc">Aspect ratio lock (16:9):</p>
+      <div class="kintoneplugin-input-checkbox">
+        <span class="kintoneplugin-input-checkbox-item">
+          <input type="checkbox" name="js-ratio-enabled" value="0" id="ratio-checkbox" checked>
+          <label for="ratio-checkbox" class="kintoneplugin-label">Enabled</label>  
+        </span>
+      </div>
+      <p class="kintoneplugin-desc">Insert the desired width of the embedded video in pixels.</p>
+      <div class="kintoneplugin-input-outer">
+        <input type="text" class="kintoneplugin-input-text" name="js-insert-width" value="560">
+      </div>
+      <p class="kintoneplugin-desc">Insert the desired height of the embedded video in pixels.</p>
+      <div class="kintoneplugin-input-outer">
+        <input type="text" class="kintoneplugin-input-text" name="js-insert-height" value="315">
+      </div>
+      <div>
+        <button type="button" id="js-reset-dimensions" class="reset-dimensions">Reset default dimsensions</button>
+      </div>
     </div>
     <!-- Cancel and Save buttons -->
-    <div class="block">
-      <p class="kintoneplugin-row">
-          <button type="button" id="settings-cancel" class="kintoneplugin-button-dialog-cancel">Cancel</button>
-          <button type="submit" id="settings-save" class="kintoneplugin-button-dialog-ok">Save</button>
-      </p>
-    </div>
+    <p class="kintoneplugin-row">
+      <button type="button" class="js-cancel-button kintoneplugin-button-dialog-cancel">Cancel</button>
+      <button class="kintoneplugin-button-dialog-ok">Save</button>
+    </p>
+  </form>
 </section>

@@ -1,15 +1,7 @@
 /* MIT License */
 /* Copyright (c) 2019 Cybozu */
 /* https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/blob/master/LICENSE */
-.settings-heading {
-  padding: 1em 0;
-}
-
-.block {
-	margin-top: 25px;
-}
-
-#reset_dimensions {
+.reset-dimensions {
   background: none;
   border: none;
   font-size: 15px;
