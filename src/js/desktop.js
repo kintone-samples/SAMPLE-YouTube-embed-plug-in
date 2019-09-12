@@ -7,14 +7,11 @@ https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/blob/master/LICENSE
   'use strict';
   // Record details event
   kintone.events.on('app.record.detail.show', function(event) {
-    var config = kintone.plugin.app.getConfig(PLUGIN_ID); // Get plug-in setting configuration
-    var VIDEO_LINK = config.select_link_field;
-    var VIDEO_WIDTH = config.insert_width;
-    var VIDEO_HEIGHT = config.insert_height;
-    var VIDEO_BLANK_SPACE = config.select_space_field;
+    var CONFIG = kintone.plugin.app.getConfig(PLUGIN_ID); // Get plug-in setting configuration
+    var VIDEO_LINK, VIDEO_WIDTH, VIDEO_HEIGHT, VIDEO_BLANK_SPACE;
     var videoId = '';
+    var fullUrl;
     var ytiframe = document.createElement('iframe');
-    var fullUrl = event.record[VIDEO_LINK].value;
     var urlExampleFull = 'https://www.youtube.com/watch?v=OOOOOOOOOOO';
     var urlExampleShort = 'https://youtu.be/OOOOOOOOOOO';
     var noVideoErrorFirstHalf = 'The Youtube URL could not be read.<br>Insert the URL either as <b>';
@@ -35,6 +32,16 @@ https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/blob/master/LICENSE
       noVideoError.innerHTML = noVideoErrorFirstHalf + urlExampleFull + '</b><br>or <b>' + urlExampleShort + noVideoErrorSecondHalf;
       kintone.app.record.getSpaceElement(VIDEO_BLANK_SPACE).appendChild(noVideoError);
     };
+
+    if (!CONFIG) {
+      return false;
+    }
+
+    VIDEO_LINK = CONFIG.link;
+    VIDEO_WIDTH = CONFIG.width;
+    VIDEO_HEIGHT = CONFIG.height;
+    VIDEO_BLANK_SPACE = CONFIG.space;
+    fullUrl = event.record[VIDEO_LINK].value;
 
     if (fullUrl.slice(0, 32) === 'https://www.youtube.com/watch?v=') {
       videoId = fullUrl.slice(32);

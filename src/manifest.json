@@ -4,12 +4,7 @@
   "type": "APP",
   "desktop": {
     "js": [
-      "https://js.cybozu.com/jquery/3.3.1/jquery.min.js",
       "js/desktop.js"
-    ],
-    "css": [
-      "css/51-modern-default.css",
-      "css/config.css"
     ]
   },
   "icon": "image/play.png",
@@ -25,8 +20,8 @@
       "css/config.css"
     ],
     "required_params": [
-      "select_link_field",
-      "select_space_field"
+      "link",
+      "space"
     ]
   },
   "name": {
