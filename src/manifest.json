@@ -29,5 +29,8 @@
   },
   "description": {
     "en": "This plug-in embeds a Youtube video specified by its link into a Blank Space field in the record details."
+  },
+  "homepage_url": {
+    "en": "https://developer.kintone.io/hc/en-us/articles/360000503842"
   }
 }
