@@ -33,7 +33,7 @@ Reference: https://get.kintone.help/hc/en-us/articles/115001519707-Installing-Vi
 3. Add the plug-in to a specific Kintone App  
 Reference: https://get.kintone.help/hc/en-us/articles/115001511188-Adding-Plug-ins-to-an-App
 4. Make sure that a Blank Space field and either a Single Line Text field or Link field are placed in the form of your Kintone App. Access the plug-in settings, and set up the neccessary settings. Save the settings, and update the App.
-5. Click the + button on the Record List page to start adding a new record. add a Youtube video link to the Text or Link field and save the record. The video will appear embedded in the place Blank Space field was placed.
+5. Click the + button on the Record List page to start adding a new record. Add a Youtube video link to the Text or Link field and save the record. The video will appear embedded in the place Blank Space field was placed.
 
 ## How to modify
 1. Fork to your repo
