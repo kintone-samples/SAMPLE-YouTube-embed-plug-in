@@ -32,7 +32,7 @@ Reference: https://github.com/kintone/SAMPLE-YouTube-embed-plug-in/releases
 Reference: https://get.kintone.help/hc/en-us/articles/115001519707-Installing-Viewing-Plug-ins
 3. Add the plug-in to a specific Kintone App  
 Reference: https://get.kintone.help/hc/en-us/articles/115001511188-Adding-Plug-ins-to-an-App
-4. Make sure that a Blank Space field and either a Single Line Text field or Link field are placed in the form of your Kintone App. Access the plug-in settings, and set up the neccessary settings. Save the settings, and update the App.
+4. Make sure that a Blank Space field and either a Single Line Text field or Link field are placed in the form of your Kintone App. Access the plug-in settings, and set up the necessary settings. Save the settings, and update the App.
 5. Click the + button on the Record List page to start adding a new record. Add a Youtube video link to the Text or Link field and save the record. The video will appear embedded in the place Blank Space field was placed.
 
 ## How to modify
@@ -40,9 +40,12 @@ Reference: https://get.kintone.help/hc/en-us/articles/115001511188-Adding-Plug-i
 2. Make changes to files under /src
 3. Repackage the plug-in by:  
  i. Zipping the manifest.json file, css directory, html directory, image directory and js directory into one zip file.  
- ii. Drag and dropping the file into the [kintone plug-in packer](https://kintone.github.io/plugin-packer/).
+ ii. Drag and dropping the file into the [kintone plug-in packer](https://kintone.dev/en/plugins/plug-in-tool-guides/package-plug-in-files-using-plugin-packer/).
 
 ## Pull Request Policy
 As this repo exists for educational purposes, we will most likely turn down pull requests that contain updates with new features.  
 Please feel free to host plug-ins with new features on your own repository.  
 Bug fixes are happily accepted.
+
+## More information
+More detailed information on the plug-in can be found here https://kintone.dev/en/plugins/simple-samples/you-tube-embed-plug-in/
